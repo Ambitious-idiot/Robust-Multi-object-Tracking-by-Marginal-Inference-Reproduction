@@ -1,8 +1,8 @@
 # README
 ## 简介
-对Robust Multi-object Tracking by Marginal Inference论文中提出的通过边缘概率计算代价矩阵从而提升追踪中匹配效果方法进行复现。目标追踪需要考虑检测器、ReID提取器和追踪器三部分。由于文中有在FairMOT基础上的实验部分，而我对相关模型较为熟悉，简便起见选择在FairMOT基础上进行复现。如果对检测和ReID部分修改保留代码中的src/lib/tracker部分即为本论文的主体部分。
+对Robust Multi-object Tracking by Marginal Inference论文中提出的通过边缘概率计算代价矩阵从而提升追踪中匹配效果方法进行复现。目标追踪需要考虑检测器、ReID提取器和追踪器三部分。由于文中有在FairMOT基础上的实验部分，而我对相关模型较为熟悉，简便起见选择在FairMOT基础上进行复现。如果使用其他的检测器和ReID提取器，使用本代码中的src/lib/tracker部分作为tracker部分即可实现对应功能。
 
-最主要的改进部分在src/lib/tracker部分，在matching.py中添加了margin_pr_distance函数，该函数接受通过余弦相似度计算得到的代价矩阵，通过本论文算法计算得到并返回边缘概率组成的代价矩阵。
+最主要的改进部分在src/lib/tracker部分，在matching.py中添加了margin_pr_distance函数，该函数接受代价矩阵，通过本论文算法计算得到并返回边缘概率组成的代价矩阵。
 
 运行代码首先配置环境：
 ```shell
@@ -27,6 +27,8 @@ wget https://motchallenge.net/data/MOT20.zip
 unzip MOT20.zip
 ```
 接下来可以运行实验，通过运行experiments中的脚本，可以进行对应实验。脚本名称中下滑线前表示使用的数据集，后表示使用的模型。
+
+notes.md为论文笔记。
 ## 复现结果
 FairMOT在MOT17数据集上的验证结果（val17）
 ![](/assets/fairmot_mot17.png)
