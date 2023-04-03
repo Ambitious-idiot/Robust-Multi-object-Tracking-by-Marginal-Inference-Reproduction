@@ -31,15 +31,25 @@ unzip MOT20.zip
 notes.md为论文笔记。
 ## 复现结果
 MOT20数据集运行结果示例：
+
 ![](assets/MOT20_01.gif)
+
 FairMOT在MOT17数据集上的验证结果（val17）
+
 ![](/assets/fairmot_mot17.png)
+
 使用本论文方法改进后的验证结果（val17）
+
 ![](/assets/marginal_pr_mot17.png)
+
 FairMOT在MOT20数据集上的验证结果（val20）
+
 ![](/assets/fairmot_mot20.png)
+
 使用本论文方法改进后的验证结果（val20）
+
 ![](/assets/marginal_pr_mot20.png)
+
 在MOT20数据集上对各个阈值超参数进行消融实验，测试了检测阈值conf_thres和第一次匹配使用的代价矩阵阈值tp对结果的影响。
 
 消融实验：conf_thres参数的影响：
