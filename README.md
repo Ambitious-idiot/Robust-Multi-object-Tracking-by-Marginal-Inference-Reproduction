@@ -56,16 +56,3 @@ FairMOT在MOT20数据集上的验证结果（val20）
 ![](/assets/conf_ablation.png)
 消融实验：tp参数的影响（tp列为代价矩阵阈值参数取值，最后一行为FairMOT结果（baseline））：
 ![](/assets/tp_ablation.png)
-## 复现时间线
-- 3.28 午晚 一直在上课
-- 3.29 早上 阅读Robust Multi-object Tracking by Marginal Inference论文
-- 3.29 午晚 阅读SORT、DeepSORT、FairMOT等论文（以前没有系统了解过目标追踪，读一些相关论文理解目标追踪整体框架）
-- 3.30 早上 重读Robust Multi-object Tracking by Marginal Inference论文，研究相关的优化知识
-- 3.30 下午 复习FairMOT代码 ，在此基础上实现基于边缘概率的代价矩阵
-- 3.30 晚上 准备MOT17、MOT20数据集，配置好运行环境，跑通代码
-- 3.31 早上 又上了一个早上的课
-- 3.31 下午 运行得到FairMOT在两个数据集上的运行结果作为baseline，发现边缘概率计算中的bug后跑通代码。
-- 3.31 晚上 按照论文中参数在数据集上进行验证
-- 4.1 早上 整理一下代码，重新写了一下实验运行脚本，添加阈值作为命令行参数方便实验
-- 4.1 午晚 验证各个阈值超参数对模型的影响
-- 4.2 早午 用来运代码的服务器登不上去被迫摸鱼，登上之后整理代码和结果
